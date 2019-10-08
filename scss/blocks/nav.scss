@@ -96,7 +96,7 @@
 }
 
 .header__top label.toggle_menu{
-    background-color: rgba(0, 0, 0, 0.541);
+    background-color: rgba(0, 0, 0, 0.253);
     padding: 2em 0;
     display: none;
     color: #fff;
@@ -113,7 +113,7 @@
 }
 
 input.toggle_menu:checked + label.toggle_menu{
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.568);
 }
 
 input.toggle_submenu:checked ~ .nav__link{

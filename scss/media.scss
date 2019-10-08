@@ -101,19 +101,11 @@
     }
 }
 @media (max-width: 700px) {
-    .header__info{
-        height: 60vh;
-    }
+
     .header{
         height: 60vh;
         &__title{
-            font-size: 4rem;
-        }
-        &__name{
-            font-size: 2rem;
-        }
-        &__buttom__link{
-            font-size: .75rem;
+            font-size: 1.5rem;
         }
     }
 }
