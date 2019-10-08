@@ -1,0 +1,130 @@
+//меню первого уровня
+.nav{
+    display: flex;
+    justify-content: space-between;
+    &__item{
+        position: relative;
+        list-style-type: none;
+        text-transform: uppercase;
+        &:hover .hover_menu{
+            display: block;
+        }
+    }
+    &__link{
+        
+        text-align: center;
+        display: block;
+        padding: 1em 1.7em;
+        color: white;
+        text-decoration: none;
+        transition: all .3s;
+        &:hover{
+            background-color: #fff;
+            color: black;
+        }
+    }
+}
+//меню второго уровня
+.hover_menu{
+    background-color: white;
+    position: absolute;
+    display: none;
+    &__item{
+        list-style-type: none;
+        min-width: 17rem;
+        
+    }
+    &__link{
+        line-height: 1.3rem;
+        text-transform:none;
+        display: block;
+        padding: .7em 1.7em;
+        color: $grayd;
+        text-decoration: none;
+        font-size: .9rem;
+        border-top: 1px solid $grayd;
+        transition: all .3s;
+        &:hover{
+            background-color: $grayd;
+            color: white;
+        }
+    }
+}
+
+.focus{
+    color: rgb(255, 0, 0);
+    &:hover{
+        color: red;
+    }
+}
+
+//бутерброд
+
+.line{
+    
+    margin-left: 3rem;
+    display: block;
+    width: 1.8rem;
+    height: 3px;
+    background-color: #fff;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1.8rem;
+        height: 3px;
+        background-color: #fff;
+        top:.625rem;
+        left: 0px;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 1.8rem;
+        height: 3px;
+        background-color: #fff;
+        bottom:.625rem;
+        left: 0px;
+    }
+}
+
+//меню для телефона
+.header__top [type="checkbox"] {
+    display: none;
+}
+
+.header__top label.toggle_menu{
+    background-color: rgba(0, 0, 0, 0.541);
+    padding: 2em 0;
+    display: none;
+    color: #fff;
+    
+}
+
+.header__top label.toggle_submenu{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+input.toggle_menu:checked + label.toggle_menu{
+    background-color: #000;
+}
+
+input.toggle_submenu:checked ~ .nav__link{
+    color: red;
+}
+
+input.toggle_menu:checked ~ .navigation{
+    display: block;
+}
+
+input.toggle_submenu:checked ~ .hover_menu{
+    display: block;
+}
+

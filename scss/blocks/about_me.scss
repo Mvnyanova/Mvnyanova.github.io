@@ -1,0 +1,14 @@
+.about_me{
+    background-color: white;
+    &__text{
+        color: black;
+    }
+    &__content{
+        line-height: 2.5rem;
+        margin-left: 1rem;
+        padding-bottom: 4rem;
+    }
+}
+.about_me__title{
+    color: rgb(255, 38, 38);
+}
